@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HousingService } from 'src/app/services/housing.service';
-import { IProperty } from '../iproperty.ts';
+import { IProperty } from '../IProperty';
 
 @Component({
   selector: 'app-property-list',
@@ -17,7 +17,7 @@ export class PropertyListComponent implements OnInit {
             this.properties = data;
             console.log(data)
       }, error => {
-        console.log('httperror')
+        console.log('httperror:')
         console.error(error);
       }
     )
