@@ -9,8 +9,9 @@ import { IProperty } from '../IProperty';
   styleUrls: ['./property-list.component.css'],
 })
 export class PropertyListComponent implements OnInit {
-  properties: Array<IProperty>;
+  properties: Array<IProperty> = [];
   constructor(private housingService: HousingService) {}
+
   ngOnInit(): void {
     this.housingService.getAllProperties().subscribe(
       data=>{
